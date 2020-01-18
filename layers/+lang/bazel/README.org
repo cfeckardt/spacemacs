@@ -1,0 +1,64 @@
+#+TITLE: Bazel layer
+
+#+TAGS: general|layer|programming
+
+[[file:img/bazel.png]]
+
+* Table of Contents                     :TOC_5_gh:noexport:
+- [[#description][Description]]
+  - [[#features][Features:]]
+- [[#install][Install]]
+  - [[#layer][Layer]]
+- [[#key-bindings][Key bindings]]
+  - [[#run][run]]
+  - [[#build][build]]
+  - [[#test][test]]
+  - [[#linting][linting]]
+
+* Description
+This layer adds configuration for Bazel (and Starlark).
+
+** Features:
+- Syntax highlighting
+- Running bazel run, bazel build and bazel test
+
+* Install
+** Layer
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =bazel= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Key bindings
+
+
+** run
+   Invokes =bazel run=
+
+| Key binding | Description                              |
+|-------------+------------------------------------------|
+| ~SPC m e e~ | run most recent target                   |
+| ~SPC m e T~ | run target (interactive prompt)          |
+
+** build
+   Invokes =bazel build=
+
+| Key binding | Description                       |
+|-------------+-----------------------------------|
+| ~SPC m b e~ | build most recent target          |
+| ~SPC m e T~ | build target (interactive prompt) |
+
+** test
+
+| Key binding | Description                      |
+|-------------+----------------------------------|
+| ~SPC m e e~ | test most recent target          |
+| ~SPC m e T~ | test target (interactive prompt) |
+
+** linting
+
+When editing bazel files (*.bzl, *.bazel, BUILD, WORKSPACE)
+the following keybinds are also available:
+
+| Key binding | Description                     |
+|-------------+---------------------------------|
+| ~SPC m =~   | run buildifier (in bzl files)   |
